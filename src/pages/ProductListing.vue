@@ -5,7 +5,7 @@
     <div
       class="self-stretch flex flex-row py-[1.5rem] px-[6.5rem] items-center justify-between"
     >
-      <img class="relative w-[12rem] h-[2rem]" alt="" src="/brand.svg" />
+      <BrandLogo />
       <div class="flex flex-row items-center justify-start gap-[3rem]">
         <div
           class="flex flex-row items-start justify-start gap-[2rem] lg:hidden"
@@ -84,6 +84,7 @@
 </template>
 <script lang="ts">
   import { defineComponent, ref } from "vue";
+  import BrandLogo from "../components/BrandLogo.vue";
   import WPAside from "../components/WPAside.vue";
   import WPProductCard from "../components/WPProductCard.vue";
   import ProductDetails from "../components/ProductDetails.vue";
@@ -92,6 +93,13 @@
 
   export default defineComponent({
     name: "ProductListing",
-    components: { WPAside, WPProductCard, ProductDetails, Signup, WPFooter },
+    components: {
+      BrandLogo,
+      WPAside,
+      WPProductCard,
+      ProductDetails,
+      Signup,
+      WPFooter,
+    },
   });
 </script>
